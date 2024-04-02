@@ -111,6 +111,10 @@ section{
     color:var(--main-color);
 }
 
+#menu-btn{
+    display: none;
+}
+
 .home{
     min-height: 100vh;
     display: flex;
@@ -176,6 +180,55 @@ section{
     color:#ccc;
     padding:1rem 0;
     line-height: 1.8;
+}
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.menu .box-container .box{
+    padding:5rem;
+    text-align: center;
+    border:var(--border);    
+}
+
+.menu .box-container .box img{
+    height: 10rem;
+}
+
+.menu .box-container .box h3{
+    color: #fff;
+    font-size: 2.1rem;
+    padding:1rem 0;
+}
+
+.menu .box-container .box h4{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    padding:1rem 0;
+}
+
+.menu .box-container .box .price{
+    color: #fff;
+    font-size: 2.5rem;
+    padding:.5rem 0;
+}
+
+.menu .box-container .box .price span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+.menu .box-container .box:hover{
+    background:#fff;
+}
+
+.menu .box-container .box:hover > *{
+    color:var(--black);
 }
 
 .contact .row{
@@ -302,6 +355,10 @@ section{
 
 @media (max-width:768px){
 
+    #menu-btn{
+        display: inline-block;
+    }
+    
     .header .navbar{
         position: absolute;
         top:100%; right: -100%;
